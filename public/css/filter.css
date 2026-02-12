@@ -1,0 +1,81 @@
+    #filters{
+        display: flex;
+        margin: 1rem 0rem 1rem 0rem;
+        width: 100%;
+    }
+
+    #filter1{
+        display: flex;
+        text-align: center;
+        gap: 20px ;
+        overflow-x: auto;
+    }
+
+
+    #filter1 i{
+        opacity: 0.7;
+        transition: transform 0.2s ease;
+    }
+
+    #filter1 i{
+        font-size: 20px;
+    }
+
+    #filter1 > form:hover i {
+        opacity: 1 !important;
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+
+    .form-switch{
+        border: 1px solid black;
+        border-radius: 16px;
+        height: 50px;
+        width: 240px;
+        padding-left: 52px;
+    }
+
+    .form-switch:hover{
+        background-color: rgba(93, 93, 93, 0.066);
+    }
+
+    .filter2>button{
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgba(0, 0, 0, 0.413);
+        border-radius: 20px;
+        height: 45px;
+        width: 45px;
+        font-size: 25px;
+    }
+
+
+    #filter1::-webkit-scrollbar {
+     display: none;
+}
+
+
+    .filter-btn{
+      all: unset;
+    }
+
+
+
+  .filter-btn.active {
+    background-color: #ffffff;
+    border-bottom: 2px solid black;
+  }
+
+.dropdown-menu>li{
+    margin: 0.8rem;
+}
+
+@media(max-width:400px){
+    #filters {
+        flex-direction: column;
+    }
+    .filter3{
+        margin-top: 20px;
+        margin-left: 0px !important;
+    }
+}

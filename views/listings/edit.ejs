@@ -1,0 +1,129 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+
+<h2 class="heading text-center">Edit Listing</h2>
+<form
+  method="POST"
+  action="/listings/<%= listing.id %>?_method=PUT"
+  class="container-md needs-validation"
+  novalidate
+  enctype="multipart/form-data"
+>
+  <div class="col-auto mb-3">
+    <label for="title">Title </label>
+    <br />
+    <input
+      name="listing[title]"
+      placeholder="Enter Title"
+      id="title"
+      type="text"
+      class="form-control"
+      value="<%= listing.title%>"
+      required
+    />
+    <div class="invalid-feedback">Please choose a title</div>
+  </div>
+  <div class="col-auto mb-3">
+    <label for="description">Description </label>
+    <br />
+    <textarea
+      name="listing[description]"
+      id="description"
+      type="text"
+      class="form-control"
+      required
+    ><%= listing.description%></textarea
+    >
+    <div class="invalid-feedback">Please enter a description</div>
+  </div>
+  <div class="col-auto">
+    <div class="d-flex">
+      <div class="col-md-3 edit-img-container mb-2">
+        <img
+          src="<%= listing.image.url %>"
+          alt="An Image"
+          id="previewImage"
+          loading="lazy"
+          class="edit-img"
+          height="200px"
+          width="200px"
+        />
+      </div>
+      <div class="col-md-9 d-flex align-items-center file-div">
+        <input
+          type="file"
+          id="fileInput"
+          name="listing[image]"
+          id="image"
+          type="file"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="price">Price </label>
+        <br />
+        <input
+          name="listing[price]"
+          placeholder="Enter Price"
+          id="price"
+          type="number"
+          value="<%= listing.price%>"
+          class="form-control"
+          required
+        />
+        <div class="row">
+          <div class="invalid-feedback">Please enter a price</div>
+        </div>
+      </div>
+      <div class="col-8">
+        <label for="country">Country </label>
+        <br />
+        <input
+          name="listing[country]"
+          placeholder="Enter Country"
+          id="country"
+          type="text"
+          value="<%= listing.country%>"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Please choose a country</div>
+      </div>
+    </div>
+    
+    <div class="row mb-3">
+      <div class="col-lg-4">
+        <label for="category">Category </label>
+        <br />
+
+        <% const categories = ["Home","Tropical","Trending","Arctic","Cabins","Play","Ski-in/out","Farms","Amazin Pools","Beach","Rooms","New","Tree House","Towers"]; %>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          name="listing[category]"
+        >
+         <% categories.forEach(cat => { %>
+          <option value="<%= cat %>" <%= listing.category === cat? "selected": ""%>><%= cat %></option>
+          <%})%>
+        </select>
+      </div>
+
+      <div class="col-lg-8">
+        <label for="location">Location </label>
+        <br />
+        <input
+          name="listing[location]"
+          placeholder="Enter Location"
+          id="location"
+          type="text"
+          class="form-control"
+          value="<%= listing.location%>"
+          required
+        />
+        <div class="invalid-feedback">Please choose a location</div>
+      </div>
+
+    </div>
+  <button class="btn red-btn mt-3">EDIT</button>
+</form>

@@ -1,0 +1,208 @@
+
+
+<div id="filters">
+
+     <div class="filter2 me-3 d-none d-md-block" >
+        <button onclick="scrollLeftBtn()"><i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+
+    
+    <div id="filter1" style="white-space: nowrap; overflow-x: auto;"  class="d-none d-md-flex">
+
+      <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Home" />
+        <button type="submit" class="filter-btn" ><i class="fa-solid fa-house"></i><p>Home</p></button>
+      </form>
+
+      <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Tropical" />
+        <button type="submit" class="filter-btn" ><i class="fa-solid fa-island-tropical"></i><p>Tropical</p></button>
+      </form>
+
+      <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Trending" />
+        <button type="submit" class="filter-btn" ><i class="fa-solid fa-fire-flame-curved"></i><p>Trending</p></button>
+     </form>
+        
+        <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Arctic" />
+        <button type="submit" class="filter-btn" ><i class="fa-solid fa-snowflakes"></i><p>Arctic</p></button>
+        </form>
+
+       <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Cabins" />
+           <button type="submit" class="filter-btn" ><i class="fa-solid fa-cabin"></i><p>Cabins</p></button>
+       </form>
+
+       <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Play" />
+           <button type="submit" class="filter-btn" ><i class="fa-solid fa-bowling-ball-pin"></i><p>Play</p></button>
+       </form>
+
+        <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Ski-in/out" />
+            <button type="submit" class="filter-btn" ><i class="fa-solid fa-person-snowboarding"></i><p>Ski-in/out</p></button>
+        </form>
+
+        <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Farms" />
+            <button type="submit" class="filter-btn" ><i class="fa-solid fa-farm"></i><p>Farms</p></button>
+        </form>
+
+        <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Amazing Pools" />
+            <button type="submit" class="filter-btn" ><i class="fa-solid fa-person-swimming"></i><p>Amazing Pools</p></button>
+        </form>
+
+        <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Beach" />
+            <button type="submit" class="filter-btn" ><i class="fa-solid fa-umbrella-beach"></i><p>Beach</p></button>
+        </form>
+
+          <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Rooms" />
+              <button type="submit" class="filter-btn" ><i class="fa-sharp fa-regular fa-bed"></i><p>Rooms</p></button>
+          </form>
+
+          <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="New" />
+              <button type="submit" class="filter-btn" > <i class="fa-regular fa-sparkles"></i><p>New</p></button>
+          </form>
+
+          <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Tree House" />
+              <button type="submit" class="filter-btn" ><i class="fa-solid fa-house-tree"></i><p>Tree House </p></button>
+          </form>
+          
+        <form method="GET" action="/listings/filter" ><input type="hidden" name="type" value="Towers" />
+            <button type="submit" class="filter-btn" ><i class="fa-regular fa-building"></i><p>Towers</p></button>
+        </form>
+
+
+    </div>
+
+
+    <div class="filter2 ms-3 me-3 d-none d-md-block" >
+        <button onclick="scrollRightBtn()"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+
+    <div class="dropdown d-md-none">
+        <button class="btn btn btn-outline-primary dropdown-toggle" type="button" id="filterMenuButton"
+          data-bs-toggle="dropdown" aria-expanded="false">
+        Filter
+        </button>
+        <ul class="dropdown-menu " aria-labelledby="filterMenuButton"  style="max-height: 200px; overflow-y: auto;">
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Home" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-solid fa-house pe-1"></i>Home
+                </button>
+                
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Tropical" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-solid fa-island-tropical pe-1"></i>Tropical
+                </button>
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Trending" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-solid fa-fire-flame-curved pe-1"></i>Trending
+                </button>
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Arctic" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-solid fa-snowflakes pe-1"></i>Arctic
+                </button>  
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Cabins" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-solid fa-cabin pe-1"></i>Cabins
+                </button>  
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Play" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-solid fa-bowling-ball-pin pe-1"></i>Play
+                </button>  
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Ski-in/out" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-solid fa-person-snowboarding pe-1"></i>Ski-in/out
+                </button>  
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Farms" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-solid fa-farm pe-1"></i>Farms
+                </button>  
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Amazing Pools" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-solid fa-person-swimming pe-1"></i>Amazing Pools
+                </button>  
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Beach" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-solid fa-umbrella-beach pe-1"></i>Beach
+                </button>  
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Rooms" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-sharp fa-regular fa-bed pe-1"></i>Rooms
+                </button>
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="New" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-regular fa-sparkles pe-1"></i>New
+                </button>
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Tree House" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-solid fa-house-tree pe-1"></i>Tree House
+                </button>  
+                </form>
+            </li>
+            <li>
+                <form method="GET" action="/listings/filter">
+                <input type="hidden" name="type" value="Towers" />
+                <button type="submit" class="filter-btn">
+                    <i class="fa-regular fa-building pe-1"></i>Towers
+                </button>  
+                </form>
+            </li>
+            
+        </ul>
+    </div>
+
+
+    <div class="filter3 ms-3" >
+        <div class="form-check form-switch d-flex align-items-center">
+            <input class="form-check-input  " type="checkbox" role="switch" id="flexSwitchCheckChecked" checked onclick="taxControl()">
+            <label class="form-check-label ps-1" for="flexSwitchCheckChecked">Display total before taxes</label>
+          </div>
+    </div>
+
+</div>
