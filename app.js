@@ -5,9 +5,9 @@ if(process.env.NODE_ENV != "production"){
 const express = require("express");
 const app = express();
 const path = require("path");
-const port = 8080;
+const port = process.env.PORT || 8080;
 const mongoose = require("mongoose");
-const MONGO_URL = "mongodb://127.0.0.1:27017/lustywander";
+const MONGO_URL = process.env.ATLASDB_URL;
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utility/ExpressError.js");
@@ -19,7 +19,6 @@ const flash = require("connect-flash");
 const User = require("./models/user.js");
 const passport =  require("passport");
 const LocalStrategy = require("passport-local");
-const passportLocalMongoose = require("passport-local-mongoose");
 
 
 app.set("view engine", "ejs");

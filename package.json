@@ -1,13 +1,13 @@
 {
   "engines":{
-    "node": "22.11.0"
+    "node": ">=22.11.0"
+  },
+  "scripts": {
+  "start": "node app.js"
   },
   "name": "major-project",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "app.js",
   "keywords": [],
   "author": "Ahmad",
   "license": "ISC",
