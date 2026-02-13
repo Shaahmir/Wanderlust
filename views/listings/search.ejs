@@ -3,9 +3,10 @@
 
 <div class="carding">
 
-    <% if(result.length == 0){ %>
-    <h1 class="text-center w-100 ">No Results Found</h1>
-    <% }%>
+  <% if(result.length==0){ %>
+  <h1 class="d-flex justify-content-center align-items-center w-100" style="grid-column: 1 / -1;min-height:
+  30vh;">No Results Found</h1>
+  <% }%>
 
   <% for(data of result){ %>
   <a href="/listings/<%= data._id  %>">

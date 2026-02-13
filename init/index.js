@@ -3,9 +3,8 @@ const Listing = require("../models/listing.js");
 const initData = require("./data.js");
 const path = require("path");
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/lustywander";
-
 require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+const MONGO_URL = process.env.ATLASDB_URL;
 
 
 main()
@@ -22,7 +21,7 @@ const initDb = async () => {
   // Update each listing with owner ID
   initData.data = initData.data.map((obj) => ({
     ...obj,
-    owner: "67c5e0a3c8eede8fd845e5b5",
+    owner: "698f110530172c36700a9d66",
   }));
 
   for (const el of initData.data) {
