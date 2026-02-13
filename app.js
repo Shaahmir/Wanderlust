@@ -19,6 +19,7 @@ const flash = require("connect-flash");
 const User = require("./models/user.js");
 const passport =  require("passport");
 const LocalStrategy = require("passport-local");
+const MongoStore = require("connect-mongo").default;
 
 
 app.set("view engine", "ejs");
@@ -29,7 +30,20 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.json());
 
+const store = MongoStore.create({
+  mongoUrl: MONGO_URL,
+  crypto:{
+    secret: "mysecretcode",
+  },
+  touchAfter: 24 * 3600,
+});
+
+store.on("error",(err)=>{
+  console.log("Error in Mongo Session Store",err);
+});
+
 const sessionOptions = {
+  store,
   secret: "MySecret",
   resave: false,
   saveUninitialized: true,

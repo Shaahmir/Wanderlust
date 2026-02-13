@@ -1,9 +1,9 @@
 {
-  "engines":{
+  "engines": {
     "node": ">=22.11.0"
   },
   "scripts": {
-  "start": "node app.js"
+    "start": "node app.js"
   },
   "name": "major-project",
   "version": "1.0.0",
@@ -16,6 +16,7 @@
     "axios": "^1.9.0",
     "cloudinary": "^2.5.1",
     "connect-flash": "^0.1.1",
+    "connect-mongo": "^6.0.0",
     "dotenv": "^16.5.0",
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
